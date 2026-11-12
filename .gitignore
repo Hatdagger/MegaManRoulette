@@ -1,0 +1,20 @@
+# Never commit game data. Players supply their own ROMs.
+*.nes
+*.fds
+*.zip
+*.7z
+roms/
+
+# Generated recompiler output and builds
+generated/
+build/
+build-*/
+out/
+
+# Local config / saves
+*.sav
+*.state
+keybinds.ini
+.vs/
+.vscode/
+.idea/
