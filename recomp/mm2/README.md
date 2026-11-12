@@ -11,8 +11,17 @@ Static recompilation of Mega Man 2 (Legacy Collection, CRC32 `CF5DE2BC`, see
 - With `seeds.txt`, the scripted route runs **100% native** (0% interpreted).
 - Native and `--interp-only` runs produce **identical per-frame hashes** for all 2,700
   frames of `route_first_stage.txt`.
-- Not yet done: comparison against the independent emulator oracle, the SDL
-  window/launcher, longer routes (full stages, bosses, Wily stages).
+- `route_first_stage.txt` matches the **TriCNES oracle on every frame** (native and
+  interpreter, alignment 0), via `nesrecomp/tools/cyc/cyc_verify.py`.
+- Not yet done: the SDL window/launcher, longer routes (full stages, bosses, Wily
+  stages).
+
+## Paused work: full-stage route
+
+`tools/mm2_route_search.py` builds cheat-free routes by greedy search from save
+states (with backtracking). It reached Air Man stage screen 2+ before being paused.
+RAM used: `$2A` stage, `$A8` lives, `$440/$460` X, `$4A0` Y, `$6C0` HP, `$6C1` boss HP.
+It is slow (~1 screen per few minutes on 2 cores); resume it or record a route by hand.
 
 ## Files
 
