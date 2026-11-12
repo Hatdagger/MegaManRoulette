@@ -1,0 +1,4 @@
+[game]
+output_prefix = "mm2"
+cycle_accurate = true
+cycle_seed_file = "seeds.txt"
